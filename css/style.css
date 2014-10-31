@@ -1,8 +1,61 @@
-body {
-  padding: 30px;
+body, html {
+	height: 100%;
+	padding: 0;
+	margin: 0;
 }
 
-#map{
-height: 400px;
+#map {
+	height: 100vh;
+	width: 100%;
+	float: left;
+	z-index: 1;
 }
 
+
+#sideBar {
+	position: absolute;
+	right: 0;
+	height: 25%;
+	width: 100vh;
+	background: 255, 255, 255, 0.9;
+	font-family: sans-serif;
+	color: #555;
+	padding: 20px;
+	z-index: 2;
+	box-sizing: border-box;
+}
+
+h1{
+	font-size: 21px;
+	margin-top: 0;
+	margin-left: 5px;
+}
+
+/* House Divs*/
+
+#menu {
+	position: absolute;
+	right: 0;
+	text-decoration: underline;
+}
+
+.house {
+	background: #BDDCF0;
+	padding: 20px;
+	border-radius: 22px;
+	margin-bottom: 29px;
+}
+
+.house.hover{
+	background: #8ECEFA;
+}
+	
+.houseTitle {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.houseInfo {
+	font-size: 14px;
+}
