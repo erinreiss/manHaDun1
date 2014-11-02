@@ -9,6 +9,40 @@ body, html {
 	width: 100%;
 }
 
+#expBar {
+	position: absolute;
+	top: 0;
+	height: 114px;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	font-family: sans-serif;
+	color: #555;
+	padding: 7px;
+	box-sizing: border-box;
+}
+
+	#houseTitle {
+		font-size: 20px;
+		padding: 34px;
+		float: left;
+	}
+
+	#information {
+		float: right;
+	}
+
+	#housePhoto {
+		float: left;
+		margin-right: 10px;
+	}
+
+	#houseStats {
+		font-size: 13px;
+		width: 550px;;
+	}
+
+
+/* Original Sidebar 
 
 #sideBar {
 	position: absolute;
@@ -23,19 +57,7 @@ body, html {
 	box-sizing: border-box;
 }
 
-#expBar {
-	position: absolute;
-	top: 0;
-	right: -25%;
-	height: 100vh;
-	width: 25%;
-	background: rgba(255, 255, 255, 0.9);
-	font-family: sans-serif;
-	color: #555;
-	padding: 20px;
-	box-sizing: border-box;
-
-/* Styling my expBar */
+*/
 
 
 

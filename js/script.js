@@ -1,4 +1,4 @@
-var map = L.map ('map').setView([40.698824, -73.989312], 12);
+var map = L.map('map').setView([40.698824, -73.989312], 12);
 
 L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
 	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
@@ -17,98 +17,29 @@ var houseIcon = L.icon({
 
 //create markes for homes
 
-var house1 = L.marker ([40.681939, -73.979651], {
-		icon: houseIcon,
-		title: house1
-	}) 
-.addTo(map);
-	// house1.bindPopup("A Park Slope Closet").openPopup();
+var house1 = L.marker ([40.681939, -73.979651], {icon: houseIcon}) .addTo(map);
 
 var house2 = L.marker ([40.674899,-73.963617], {icon: houseIcon}) .addTo(map);
-	// house2.bindPopup("A Prospect Heights Matchbook").openPopup();
-
+	
 var house3 = L.marker ([40.712934, -73.989794], {icon: houseIcon}) .addTo(map);
-	// house3.bindPopup("A Chinatown Shoebox").openPopup();
-
-
-//listeners for sidebar hovers
-
-$('.house1').on('mouseover', function(){
-	$('.house1').toggleClass('hover');
-});
-
-$('.house1').on('mouseout', function(){
-	$('.house1').toggleClass('hover');
-});
-
-$('.house2').on('mouseover', function(){
-	$('.house2').toggleClass('hover');
-});
-
-$('.house2').on('mouseout', function(){
-	$('.house2').toggleClass('hover');
-});
-
-$('.house3').on('mouseover', function(){
-	$('.house3').toggleClass('hover');
-});
-
-$('.house3').on('mouseout', function(){
-	$('.house3').toggleClass('hover');
-});
-
+	
 //listeners for icons
 
-house1.on('mouseover', function(){
-	$('.house1').toggleClass('hover');
-})
-
-.on('mouseout', function(){
-		$('.house1').toggleClass('hover');
-})
-
-.on('click', function(e){
+house1.on('click', function(e){
 	console.log(e);
-	map.panTo(new L.LatLng(40.681939, -73.979651), {animate: true, duration: 1.0})
-	$('#expBar').animate({
-		right: 0
-	}, 1000);
+	map.panTo(new L.LatLng(40.681939, -73.979651), {animate: true, duration: 1.0});
+	$('#houseStats').text("<i>Address:</i> 27 Rutgers St.  <br><i>Neighborhood:</i> Chinatown <br><i>Time Spent:</i>  1 year <br><i>Info:</i>  This is where I live now. I live on the 2nd floor of a Chinatown walk-up, above a Chinese food restaurant called 'Forever Taste.' I love the area, I get to practice Chinese and I live two blocks from the East River.");
+	$('#houseTitle').text("Chinatown Home-Stay");
 });
 
-house2.on('mouseover', function(){
-	$('.house2').toggleClass('hover');
-})
-
-	.on('mouseout', function(){
-		$('.house2').toggleClass('hover');
-})
-
-	.on('click', function(){
-		map.panTo(new L.LatLng(40.674899,-73.963617), {animate: true, duration: 1.0})
+house2.on('click', function(){
+	map.panTo(new L.LatLng(40.674899,-73.963617), {animate: true, duration: 1.0});
+	$('#houseStats').text("<i>Address:</i> 431 Sterling Pl.  <br><i>Neighborhood:</i> Prospect Heights <br><i>Time Spent:</i>  6 months <br><i>Info:</i>  My first real home in NYC, I moved here with Lizzie after living in the City for only a few months. We shared this strange and ecclectic 3 bedroom apartment with three wonderful friends.");
+	$('#houseTitle').text("A Strange New Cottage in Brooklyn");
 });
 
-house3.on('mouseover', function(){
-	$('.house3').toggleClass('hover');
-})
-
-	.on('mouseout', function(){
-		$('.house3').toggleClass('hover');
-})
-
-	.on('click', function(){
-		map.panTo(new L.LatLng(40.712934, -73.989794), {animate: true, duration: 1.0})
-});
-
-//listeners for sidebar clicks
-
-$('.house1').on('click', function(){
-	map.panTo(new L.LatLng(40.681939, -73.979651), {animate: true, duration: 1.0})
-});
-
-$('.house2').on('click', function(){
-	map.panTo(new L.LatLng(40.674899,-73.963617), {animate: true, duration: 1.0})
-});
-
-$('.house3').on('click', function(){
-	map.panTo(new L.LatLng(40.712934, -73.989794), {animate: true, duration: 1.0})
+house3.on('click', function(){
+		map.panTo(new L.LatLng(40.712934, -73.989794), {animate: true, duration: 1.0});
+		$('#houseStats').text("<i>Address:</i> 59 5th Ave.  <br><i>Neighborhood:</i> Park Slope <br><i>Time Spent:</i>  2 months <br><i>Info:</i>  This was actually a closet. Somehow Lizzie and I shared this room for the two months after I first arrived in the city.");
+	$('#houseTitle').text("Park Slope Shoeboc");
 });
