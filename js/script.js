@@ -17,7 +17,11 @@ var houseIcon = L.icon({
 
 //create markes for homes
 
-var house1 = L.marker ([40.681939, -73.979651], {icon: houseIcon}) .addTo(map);
+var house1 = L.marker ([40.681939, -73.979651], {
+		icon: houseIcon,
+		title: house1
+	}) 
+.addTo(map);
 	// house1.bindPopup("A Park Slope Closet").openPopup();
 
 var house2 = L.marker ([40.674899,-73.963617], {icon: houseIcon}) .addTo(map);
@@ -29,39 +33,71 @@ var house3 = L.marker ([40.712934, -73.989794], {icon: houseIcon}) .addTo(map);
 
 //listeners for sidebar hovers
 
-$('.house').on('mouseover', function(){
-	$(this).css('background', '#8ECEFA');
+$('.house1').on('mouseover', function(){
+	$('.house1').toggleClass('hover');
 });
 
-$('.house').on('mouseout', function(){
-	$(this).css('background', '#BDDCF0');
+$('.house1').on('mouseout', function(){
+	$('.house1').toggleClass('hover');
 });
 
-//listeners for icon hovers
+$('.house2').on('mouseover', function(){
+	$('.house2').toggleClass('hover');
+});
+
+$('.house2').on('mouseout', function(){
+	$('.house2').toggleClass('hover');
+});
+
+$('.house3').on('mouseover', function(){
+	$('.house3').toggleClass('hover');
+});
+
+$('.house3').on('mouseout', function(){
+	$('.house3').toggleClass('hover');
+});
+
+//listeners for icons
 
 house1.on('mouseover', function(){
 	$('.house1').toggleClass('hover');
 })
 
-	.on('mouseout' function(){
+.on('mouseout', function(){
 		$('.house1').toggleClass('hover');
-	});
+})
+
+.on('click', function(e){
+	console.log(e);
+	map.panTo(new L.LatLng(40.681939, -73.979651), {animate: true, duration: 1.0})
+	$('#expBar').animate({
+		right: 0
+	}, 1000);
+});
 
 house2.on('mouseover', function(){
 	$('.house2').toggleClass('hover');
 })
 
-	.on('mouseout' function(){
+	.on('mouseout', function(){
 		$('.house2').toggleClass('hover');
-	});
+})
+
+	.on('click', function(){
+		map.panTo(new L.LatLng(40.674899,-73.963617), {animate: true, duration: 1.0})
+});
 
 house3.on('mouseover', function(){
 	$('.house3').toggleClass('hover');
 })
 
-	.on('mouseout' function(){
+	.on('mouseout', function(){
 		$('.house3').toggleClass('hover');
-	});
+})
+
+	.on('click', function(){
+		map.panTo(new L.LatLng(40.712934, -73.989794), {animate: true, duration: 1.0})
+});
 
 //listeners for sidebar clicks
 
