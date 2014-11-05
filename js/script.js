@@ -9,11 +9,11 @@ L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
 
 //define House Icon
 
-var houseIcon = L.icon({
-    iconUrl:      'images/HomeIcon.png',
-    iconSize:     [30, 30], // size of the icon
-    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
-    popupAnchor:  [0, -15] // point from which the popup should open relative to the iconAnchor
+	var houseIcon = L.icon({
+	    iconUrl:      'images/HomeIcon.png',
+	    iconSize:     [30, 30], // size of the icon
+	    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+	    popupAnchor:  [0, -15] // point from which the popup should open relative to the iconAnchor
 })
 
 //create markes for homes
