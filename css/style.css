@@ -42,7 +42,7 @@ body, html {
 
 	#houseStats {
 		font-size: 12px;
-		width: 550px;;
+		max-width: 550px;
 	}
 
 	#titlePlate {
