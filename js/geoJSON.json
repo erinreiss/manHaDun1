@@ -8,7 +8,7 @@
         "hAddress": "27 Rutgers St.",
         "hNabe": "Chinatown",
         "hTime": "1 year",
-        "hInfo": "This is where I live now. I live on the 2nd floor of a Chinatown walk-up, above a Chinese food restaurant called \\\"Forever Taste.\\\" I love the area, I get to practice Chinese and I live two blocks from the East River.",
+        "hInfo": "This is where I live now. I live on the 2nd floor of a Chinatown walk-up, above a Chinese food restaurant called \"Forever Taste.\" I love the area, I get to practice Chinese and I live two blocks from the East River.",
         "hPhoto": "images/house4pic.png"
       },
       "geometry": {
@@ -60,7 +60,7 @@
       "properties": {
         "hAddress": "896 Washington Ave.",
         "hTitle": "Prospect Park Stopover",
-        "hNabe": "Prospect Heights",
+        "hNabe": "Crown Heights",
         "hTime": "1 month",
         "hInfo": "I lived here as a way to motivate myself to find my own place. I found a passport of a friend under my bed and it turns out he was boinking the previous tenant of the room.",
         "hPhoto": "images/house3pic.png"
