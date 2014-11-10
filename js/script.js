@@ -34,10 +34,9 @@ $.getJSON('./js/geoJSON.json',function(data){
 function makeMarkers(feature, layer) {
 	var thisFeature = feature.properties;
 		console.log(layer);
-		console.log(feature);
 		console.log(feature.properties.hTitle);
 	layer.on("click", function(e){
-		map.panTo(new L.LatLng(feature.coordinates.0,feature.coordinates.1), {animate: true, duration: 1.0});
+		map.panTo(new L.LatLng(feature.geometry.coordinates[1],feature.geometry.coordinates[0]), {animate: true, duration: 1.0});
 		$('#houseTitle').text(feature.properties.hTitle)
 		$('.addressFill').text(feature.properties.hAddress)
 		$('.nabeFill').text(feature.properties.hNabe)
