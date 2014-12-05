@@ -1,85 +1,58 @@
-//Set Up The Map
-var map = L.map('map', {zoomControl: false})
-	.setView([40.698824, -73.989312], 13);
+//Add SVG Map
 
-//Set Up Basemap Tiles From Stamen
-L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
-	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-	maxZoom: 17,
-	minZoom: 13
-}).addTo(map);
-L.control.zoom({position: 'bottomleft'}).addTo(map);
+ // $.get('../images/handMHDmap_OverLayBoxes.svg', 
+ // 		function(data) {
+ //    	$(document.body).append(data.documentElement);
+ //  	});
 
-//Create My Custom Icon Variable
-var houseIcon = L.icon({
-	iconUrl:      'images/HomeIcon.png',
-	iconSize:     [30, 30],
-	iconAnchor:   [15, 15],
-	popupAnchor:  [0, -15] 
-})
 
-//Load External geoJSON (WTF is pointToLayer???)
-$.getJSON('./js/geoJSON.json',function(data){
-	//why is this a var?
-	var geojsonLayer = L.geoJson(data.features, {
-		onEachFeature: makeMarkers,
-		pointToLayer: function (feature, latlng) {
-			//can you define the custom icon var here?
-			return L.marker(latlng, {icon:houseIcon});
-		}
-	}).addTo(map);
+var eb = $("#easBlaWay");
+
+// $(eb).hover(
+// 	function(){
+// 		$(eb).fadeOut();
+// 	},
+// 	function(){
+// 		$(eb).fadeIn();
+// 	}
+// );
+
+// var this = $(this);
+
+$(eb).mouseenter(
+	function(){
+		// console.log("enter");
+		$(eb).fadeTo("opacity", "0");
+	}
+);
+
+$(eb).mouseleave(
+	function(){
+		// console.log("exit");
+		$(eb).fadeTo("opacity", "1");
+	}
+);
+
+//Load CSV
+
+var content;
+
+d3.csv("content.csv", function(data){
+	// how to set a window variable so you can access data in console
+	// window.data = data;
+	content = data;
 });
 
 
-function makeMarkers(feature, layer) {
-	var thisFeature = feature.properties;
-		console.log(layer);
-		console.log(feature.properties.hTitle);
-	layer.on("click", function(e){
-		map.panTo(new L.LatLng(feature.geometry.coordinates[1],feature.geometry.coordinates[0]), {animate: true, duration: 1.0});
-		$('#houseTitle').text(feature.properties.hTitle)
-		$('.addressFill').text(feature.properties.hAddress)
-		$('.nabeFill').text(feature.properties.hNabe)
-		$('.timeFill').text(feature.properties.hTime)
-		$('.infoFill').text(feature.properties.hInfo)
-		$('#housePhoto').attr("src",feature.properties.hPhoto)
-	});
+//Populate Top Bar with clicked street's info
 
- };
-
-
-
-
-
-//Defines what happens when marker is clicked
-
-//function onClick(e) { //e is the event
-//	console.log("boo")
-//	console.log(this)
-//	console.log("boo")
-//};
-
-
-//That hail mary that Chris found to first get geoJSON to use my custom markers
-
-//function buttonSetup(feature, layer) {
-//	layer.icon = houseIcon;
-//	console.log(layer);
-//  }
-
-
-//function testFunction(feature, latlng) {
-//	console.log("testfunction");
-//	 return L.marker(latlng, {icon:houseIcon});
-//}
-
-//var geojsonLayer = new L.GeoJSON.AJAX("./js/geoJSON.json", 
-//	{onEachFeature:buttonSetup,pointToLayer:testFunction});
-
-//geojsonLayer.addTo(map);
-
-
-
-
-
+$("#easBlaWay").click(function(){
+ 		$('#streetTitleCh').text(feature.properties.hTitle)
+		$('#streetTitleEn').text(feature.properties.hAddress)
+		$('.nameFill').text(feature.properties.hNabe)
+		$('.jobFill').text(feature.properties.hTime)
+		$('.timeFill').text(feature.properties.hInfo)
+		$('.bioFill').text(feature.properties.hInfo)
+		$('#speakerPhoto').attr("src",feature.properties.hPhoto)
+ });
 

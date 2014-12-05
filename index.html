@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>JSON Map 1</title>
+	<title>SVG Map</title>
 	<!-- script should maybe be moved to the bottom of the page?> -->
 	<script src="audiojs/audiojs/audio.min.js"></script>
 	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="audiojs/includes/index.css" media="screen">
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
  <!-- This script should maybe be moved to js> -->
 	 <script>
       audiojs.events.ready(function() {
@@ -18,27 +17,65 @@
 </head>
 <body>
 
+
  <!-- The Map -->
 
-<div id="map"></div>
+<?xml version="1.0" encoding="utf-8"?>
+	<!-- Generator: Adobe Illustrator 18.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+		 viewBox="0 0 2114.5 1752" enable-background="new 0 0 2114.5 1752" xml:space="preserve">
+	<g id="extentBox">
+		<rect x="0" opacity="0.51" fill="none" width="2114.5" height="1752"/>
+	</g>
+	<g id="nameBoxes">
+		<rect x="210.5" y="883" opacity="0.39" fill="#F0E91D" width="166" height="58"/>
+		
+			<rect x="758.8" y="992.4" transform="matrix(0.8793 -0.4762 0.4762 0.8793 -377.1139 554.7231)" opacity="0.39" fill="#F0E91D" width="294.3" height="58"/>
+		
+			<rect x="756.6" y="878.6" transform="matrix(0.8793 -0.4762 0.4762 0.8793 -331.1507 508.3588)" opacity="0.39" fill="#F0E91D" width="161.7" height="58"/>
+		
+			<rect id="easBlaWay" x="805.3" y="711.7" transform="matrix(0.9053 -0.4248 0.4248 0.9053 -227.3748 461.4927)" opacity="0.39" fill="#F0E91D" width="232" height="58"/>
+		
+			<rect x="751.1" y="543.5" transform="matrix(0.9998 1.842145e-02 -1.842145e-02 0.9998 10.6886 -15.289)" opacity="0.39" fill="#F0E91D" width="168.3" height="58"/>
+		
+			<rect x="851.1" y="451.2" transform="matrix(0.9998 1.842145e-02 -1.842145e-02 0.9998 9.0059 -17.3232)" opacity="0.39" fill="#F0E91D" width="187.5" height="58"/>
+		
+			<rect x="944.8" y="363.4" transform="matrix(0.9998 1.842145e-02 -1.842145e-02 0.9998 7.4072 -19.3005)" opacity="0.39" fill="#F0E91D" width="213" height="58"/>
+		
+			<rect x="471.5" y="655" transform="matrix(0.3761 -0.9266 0.9266 0.3761 -285.8471 943.4706)" opacity="0.39" fill="#F0E91D" width="172.3" height="58"/>
+		
+			<rect x="530.8" y="731" transform="matrix(0.3079 -0.9514 0.9514 0.3079 -296.074 1113.0054)" opacity="0.39" fill="#F0E91D" width="172.3" height="58"/>
+		
+			<rect x="490.9" y="1187" transform="matrix(-0.1295 -0.9916 0.9916 -0.1295 -554.0017 1945.5769)" opacity="0.39" fill="#F0E91D" width="172.3" height="58"/>
+		
+			<rect x="221.9" y="1468.7" transform="matrix(-1.050052e-02 -0.9999 0.9999 -1.050052e-02 -1081.8362 1924.786)" opacity="0.39" fill="#F0E91D" width="379" height="58"/>
+		
+			<rect x="1616.9" y="380.9" transform="matrix(-0.9995 -3.242607e-02 3.242607e-02 -0.9995 3598.6018 878.1969)" opacity="0.39" fill="#F0E91D" width="379" height="58"/>
+		
+			<rect x="1173.9" y="1191.8" transform="matrix(-0.9995 -3.242607e-02 3.242607e-02 -0.9995 2983.2651 2558.1909)" opacity="0.39" fill="#F0E91D" width="677" height="126.2"/>
+		<polygon opacity="0.39" fill="#F0E91D" points="712.4,612.7 938.6,621.6 923.8,684 636.4,824.7 	"/>
+	</g>
+	</svg>
+
+
 
  <!-- The Top Bar -->
 
 <div id="expBar">
 
-	<div id="titles">	
-		<div id="houseTitle">&ldquo;Kenelu&rdquo;</div>
-		<div id="houseTitleSub">Canal Street</div>
-		<div id="audioBar"><audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3" preload="auto"></audio></div>
+	<div id="streetInfo">	
+		<div id="streetTitleCh"></div>
+		<div id="streetTitleEn"></div>
+		<!-- <div id="audioBar"><audio src="http://kolber.github.io/audiojs/demos/mp3/juicy.mp3" preload="auto"></audio></div> -->
 	</div>
 	
-	<div id="information">
-		<div id="photoSpace"><img id="housePhoto" src="images/house4pic.png" style="width:100px;height:100px"></div>
-		<div id="houseStats">
-			<b>Address:  </b><span class="addressFill">27 Rutgers St.</span> 
-			<br><b>Neighborhood:  </b> <span class="nabeFill">Chinatown</span>
-			<br><b>Time Spent:  </b><span class="timeFill">1 year</span>
-			<br><b>Info:  </b><span class="infoFill">This is where I live now. I live on the 2nd floor of a Chinatown walk-up, above a Chinese food restaurant called "Forever Taste." I love the area, I get to practice Chinese and I live two blocks from the East River.</span>
+	<div id="speakerInfo">
+		<div id="photoSpace"><img id="speakerPhoto" src="images/house4pic.png" style="width:100px;height:100px"></div>
+		<div id="speakerName">
+			<b>Name:  </b><span class="nameFill"></span> 
+			<br><b>Occupation:  </b> <span class="jobFill"></span>
+			<br><b>Time Spent:  </b><span class="timeFill"></span>
+			<br><b>Info:  </b><span class="bioFill"></span>
 		</div>
 	</div>
 </div>
@@ -62,13 +99,9 @@
 -->
 
 
- <!-- When the window gets narrow? -->
-
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-<script src="https://rawgit.com/calvinmetcalf/leaflet-ajax/master/dist/leaflet.ajax.min.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
 <script src="js/script.js"></script>
 
 </body>
