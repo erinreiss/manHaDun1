@@ -1,0 +1,35 @@
+[
+  {
+    "id":"easBlaWayH",
+    "streetTitleCh":"Eas Blaway",
+    "streetTitleEn":"East Broadway",
+    "audio url":"audio/0031_EasBahlahway.mp3",
+    "speakerPhoto":"images/aaron.png",
+    "nameFill":"Aaron Reiss (李然)",
+    "jobFill":"Journalist",
+    "timeFill":"2 years",
+    "speaker bio":"So good, this place. Just really not so bad."
+  },
+  {
+    "id":"geLanH",
+    "streetTitleCh":"Gelan",
+    "streetTitleEn":"Grand Street",
+    "audio url":"audio/0058_Gelan.mp3",
+    "speakerPhoto":"images/house1pic.png",
+    "nameFill":"Cody Reiss",
+    "jobFill":"Improviser",
+    "timeFill":"3 months",
+    "speaker bio":"What can I say? Love the area even if it has some drawbacks."
+  },
+  {
+    "id":"keNeLuH",
+    "streetTitleCh":"Kenelu",
+    "streetTitleEn":"Canal Street",
+    "audio url":"audio/0030_Kenelu.mp3",
+    "speakerPhoto":"images/house2pic.png",
+    "nameFill":"Lizzie Fulton",
+    "jobFill":"Law Student",
+    "timeFill":"~20 years",
+    "speaker bio":"It's hard here, hard to make ends meet."
+  }
+]

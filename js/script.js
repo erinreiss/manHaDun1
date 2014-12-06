@@ -20,40 +20,40 @@ $(hLights).mouseleave(
 	}
 );
 
-//Load CSV Content
+//Load CSV Content using Json
 
-var content;
-
-d3.csv("content.csv", function(data){
-	// how to set a window variable so you can access data in console
-	window.data = data;
-	content = data;
-});
-
-//Click Listener
-$(hLights).click(
-	function(){
-		$('.nameFill').text(this.id)
-	}
+$.getJSON("convertcsv.json", 
+	function(content){
+    	console.log(content);
+    }
 );
 
 //Populate Top Bar with clicked street's info
 
-var row = _.findWhere(content, {id: easBlaWayH});
-	//also tried:
-		//var row = _.findWhere(data, {id: easBlaWayH});
-		//var row = _.findWhere(content.csv, {id: easBlaWayH});
-console.log (row);
+//Click Listener
+$(hLights).click(
+	function(){
+		var thisID = (this.id);
+		$('.nameFill').text(this.id);
+	}
+);
 
-// $(eb).click(
-// 	function(){
-//  		$('#streetTitleCh').text(feature.properties.hTitle)
-// 		$('#streetTitleEn').text(feature.properties.hAddress)
-// 		$('.nameFill').text(feature.properties.hNabe)
-// 		$('.jobFill').text(feature.properties.hTime)
-// 		$('.timeFill').text(feature.properties.hInfo)
-// 		$('.bioFill').text(feature.properties.hInfo)
-// 		$('#speakerPhoto').attr("src",feature.properties.hPhoto)
-//  	}
-// );
+//Attempt to Use Underscore.js
+
+	// var row = _.findWhere(content, {id: "easBlaWayH"});
+		//also tried:
+			//var row = _.findWhere(data, {id: easBlaWayH});
+			//var row = _.findWhere(content, {id: easBlaWayH});
+			//var row = _.findWhere(content.csv, {id: easBlaWayH});
+	// console.log (row);
+
+//Load CSV Content using CSV
+
+		// var content;
+
+		// d3.csv("content.csv", function(data){
+		// 	// how to set a window variable so you can access data in console
+		// 	window.data = data;
+		// 	content = data;
+		// });
 
