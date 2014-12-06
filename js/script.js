@@ -1,7 +1,7 @@
 // Hover Listener
 
 var hLights = $(".hLights");
-// console.log(hLights);
+var matchData;
 
 // Fade in & out on hover
 
@@ -34,7 +34,17 @@ $.getJSON("convertcsv.json",
 $(hLights).click(
 	function(){
 		var thisID = (this.id);
+		console.log(thisID);
 		$('.nameFill').text(this.id);
+
+
+		for(var i=0;i<matchData.length;i++) {
+			if(matchData[i].id == thisID) {
+				console.log(matchData[i]);
+				$('.jobFill').text(matchData[i].jobfill);
+				break;
+			}
+		}
 	}
 );
 
