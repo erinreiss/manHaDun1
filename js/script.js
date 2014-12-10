@@ -1,8 +1,6 @@
 // On Load, give a class of "hLights" to all rects in "highlights"
-$(document).ready(function() {
-    console.log( "ready!" );
-    $("#highlights rect").addClass("hLights");
-});
+
+$("#highlights rect").attr("class", "hLights");
 
 // Hover Listener
 
@@ -58,6 +56,8 @@ $(hLights).click(
 		}
 	}
 );
+
+//function to reload audio player on each click
 
 function changeTrack(sourceUrl) {
     var audio = $("#player");      
