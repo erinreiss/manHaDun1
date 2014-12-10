@@ -38,6 +38,7 @@ $.getJSON("convertcsv.json",
 //Click Listener
 $(hLights).click(
 	function(){
+		$('.hide').removeClass('hide')
 		var thisID = (this.id);
 		// console.log(thisID);
 		for(var i=0;i<matchData.length;i++) {

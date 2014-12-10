@@ -30,8 +30,8 @@ body {
 	box-sizing: border-box;
 }
 
-.show{
-
+.hide{
+	visibility: hidden
 }
 
 /* Left side of the Top Bar*/
