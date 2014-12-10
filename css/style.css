@@ -1,15 +1,86 @@
 html {
-/*	height: 100%;
-*/	padding: 0;
+	/*	height: 100%;*/	
+	padding: 0;
 	margin: 0;
 }
 
 body {
-/*	height: 100%;*/
+	/*	height: 100%;*/
 	padding: 0;
 	margin: 0;
 	font-family: 'Lora', serif;
 }
+
+/*Map Elements*/
+
+.hLights {
+	cursor: pointer;
+}
+
+/*Top Bar, In General*/
+
+#topBar {
+	position: absolute;
+	top: 0;
+	height: 114px;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	color: #555;
+	padding: 7px;
+	box-sizing: border-box;
+}
+
+/* Left side of the Top Bar*/
+	
+	#streetInfo
+	{
+	float: left;
+	width: 50%;
+	}
+
+	#streetTitleCh {
+		font-size: 42px;
+		text-transform: uppercase;
+		font-style: italic;
+		margin-top: 7px;
+		margin-bottom: 2px;
+		letter-spacing: 13px;
+		text-align: center;
+	}
+
+	#streetTitleEn {
+		font-size: 20px;
+		margin-bottom: 15px;
+		text-align: center;
+	}
+
+	#audioDiv{
+		display: table;
+    	margin: 0 auto;
+	}
+
+/* Right side of the Top Bar*/
+
+	#speakerInfo {
+		float: right;
+		width: 50%;
+	}
+
+	#speakerPhoto {
+		float: left;
+		margin-right: 10px;
+	}
+
+	#speakerStats {
+		font-size: 14.5px;
+		max-width: 550px;
+	}
+
+	#titlePlate {
+		background-color: white
+	}
+
+/*Info Box, not used currently*/
 
 #infoBox {
 	position: absolute;
@@ -39,120 +110,3 @@ body {
 #clickHouse{
 	font-size: 15px;
 	color: red;
-}
-
-/*#map {
-	position: fixed; top: 0; left: 0; 
-	}
-
-.mapWidth { width: 100%; }
-.mapHeight { height: 100%; }*/
-
-#expBar {
-	position: absolute;
-	top: 0;
-	height: 114px;
-	width: 100%;
-	background: rgba(255, 255, 255, 0.9);
-	color: #555;
-	padding: 7px;
-	box-sizing: border-box;
-}
-
-/* Left side of the Top Bar*/
-#titles
-{
-float: left;
-width: 40%;
-}
-	#houseTitle {
-		font-size: 49px;
-		text-transform: uppercase;
-		font-style: italic;
-		letter-spacing: 13px;
-		text-align: center;
-	}
-
-	#houseTitleSub {
-		font-size: 13px;
-		font-size: 18px;
-		margin-top: -8px;
-		text-align: center;
-	}
-
-/* Right side of the Top Bar*/
-
-	#information {
-		float: right;
-		width: 60%;
-	}
-
-	#housePhoto {
-		float: left;
-		margin-right: 10px;
-	}
-
-	#houseStats {
-		font-size: 12px;
-		max-width: 550px;
-	}
-
-	#titlePlate {
-		background-color: white
-	}
-
-
-/* Original Sidebar 
-
-#sideBar {
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100vh;
-	width: 25%;
-	background: rgba(255, 255, 255, 0.9);
-	font-family: sans-serif;
-	color: #555;
-	padding: 20px;
-	box-sizing: border-box;
-}
-
-*/
-
-
-
-
-h1{
-	font-size: 21px;
-	margin-top: 0;
-	margin-left: 5px;
-}
-
-/* House Divs*/
-
-#menu {
-	position: absolute;
-	right: 0;
-	text-decoration: underline;
-}
-
-.house {
-	background: #BDDCF0;
-	padding: 20px;
-	border-radius: 22px;
-	margin-bottom: 29px;
-}
-
-.house.hover{
-	background: #8ECEFA;
-}
-	
-.houseTitle {
-	font-size: 20px;
-	font-weight: bold;
-	margin-bottom: 4px;
-}
-
-.houseInfo {
-	font-size: 14px;
-}

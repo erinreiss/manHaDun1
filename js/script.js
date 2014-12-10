@@ -1,3 +1,9 @@
+// On Load, give a class of "hLights" to all rects in "highlights"
+$(document).ready(function() {
+    console.log( "ready!" );
+    $("#highlights rect").addClass("hLights");
+});
+
 // Hover Listener
 
 var hLights = $(".hLights");
@@ -25,6 +31,7 @@ $(hLights).mouseleave(
 $.getJSON("convertcsv.json", 
 	function(content){
     	console.log(content);
+    	matchData = content;
     }
 );
 
@@ -34,36 +41,29 @@ $.getJSON("convertcsv.json",
 $(hLights).click(
 	function(){
 		var thisID = (this.id);
-		console.log(thisID);
-		$('.nameFill').text(this.id);
-
-
+		// console.log(thisID);
 		for(var i=0;i<matchData.length;i++) {
 			if(matchData[i].id == thisID) {
-				console.log(matchData[i]);
-				$('.jobFill').text(matchData[i].jobfill);
+				// console.log(matchData[i].audioFill);
+				$('.nameFill').text(matchData[i].nameFill);
+				$('.jobFill').text(matchData[i].jobFill);
+				$('.timeFill').text(matchData[i].timeFill);
+				$('.bioFill').text(matchData[i].bioFill);
+				$('#streetTitleCh').html("&ldquo;" + matchData[i].streetTitleCh + "&rdquo;");
+				$('#streetTitleEn').text(matchData[i].streetTitleEn);
+				$('#speakerPhoto').attr("src",matchData[i].speakerPhoto)
+				changeTrack(matchData[i].audioFill);
 				break;
 			}
 		}
 	}
 );
 
-//Attempt to Use Underscore.js
-
-	// var row = _.findWhere(content, {id: "easBlaWayH"});
-		//also tried:
-			//var row = _.findWhere(data, {id: easBlaWayH});
-			//var row = _.findWhere(content, {id: easBlaWayH});
-			//var row = _.findWhere(content.csv, {id: easBlaWayH});
-	// console.log (row);
-
-//Load CSV Content using CSV
-
-		// var content;
-
-		// d3.csv("content.csv", function(data){
-		// 	// how to set a window variable so you can access data in console
-		// 	window.data = data;
-		// 	content = data;
-		// });
+function changeTrack(sourceUrl) {
+    var audio = $("#player");      
+    $("#audioFill").attr("src", sourceUrl);
+    audio[0].pause();
+    audio[0].load();//suspends and restores all audio element
+    audio[0].play();
+}
 
