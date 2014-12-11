@@ -22,7 +22,7 @@ body {
 #topBar {
 	position: absolute;
 	top: 0;
-	height: 114px;
+	height:140px;
 	width: 100%;
 	background: rgba(255, 255, 255, 0.9);
 	color: #555;
@@ -32,6 +32,34 @@ body {
 
 .hide{
 	visibility: hidden
+}
+
+#introTitle{
+	font-size: 21px;
+	margin-top: 7px;
+	margin-bottom: 21px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+#introSubTitle{
+	color: black;
+	font-size: 32px;
+	letter-spacing: 2px;
+	margin-bottom: 2px;
+	text-align: center;
+}
+
+#introBody{
+	color: black;
+	font-size: 17px;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 7px;
+	margin-bottom: 2px;
+	line-height: 23px;
+	text-align: center;
 }
 
 /* Left side of the Top Bar*/
