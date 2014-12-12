@@ -40,7 +40,7 @@ $(hLights).click(
 	function(){
 		$('.hide').removeClass('hide');
 		$('.intro').addClass('hide');
-		//$('#topBar').attr('height', '140px');
+		// $('#topBar').animate({height:'140px'}, 500);
 		var thisID = (this.id);
 		// console.log(thisID);
 		for(var i=0;i<matchData.length;i++) {
