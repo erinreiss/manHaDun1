@@ -11,16 +11,15 @@ var matchData;
 
 $('#learnMore').mouseenter(
 	function(){
-		// console.log("enter");
-		// console.log(this.id)
-		$(this).fadeTo("opacity", "1");
+		$(this).animate({backgroundColor: "rgba(67, 125, 225, 0.95)"
+		},500);
 	}
 );
 
 $('#learnMore').mouseleave(
 	function(){
-		// console.log("exit");
-		$(this).fadeTo("opacity", ".45");
+		$(this).animate({backgroundColor: "rgba(67, 125, 225, 0.45)"
+		},500);
 	}
 );
 
@@ -28,7 +27,7 @@ $('#learnMore').mouseleave(
 
 $(hLights).mouseenter(
 	function(){
-		// console.log("enter");
+		console.log("enter");
 		// console.log(this.id)
 		$(this).fadeTo("opacity", ".39");
 	}
@@ -53,14 +52,27 @@ $.getJSON("convertcsv.json",
 // Learn More Click Listener
 $('#learnMore').click(
 	function(){
-		$('.intro').addClass('hide');
+		// $('.intro').fadeTo('opacity', '0');
+		$('.intro').css('visibility','hidden');
+		$('#skipIntro').css('visibility','visible');
+	}
+);
+
+// Skip Intro Click Listener
+
+$('#skipIntro').click(
+	function(){
+		$('#skipIntro').css('visibility','hidden');
+		$(hLights).css('visibility','visible');
+		$('#clickStreet').css('visibility','visible');
 	}
 );
 
 // Streets Click Listener
 $(hLights).click(
 	function(){
-		$('.hide1').removeClass('hide1');
+		$('#clickStreet').css('visibility','hidden');
+		$('#topBar').css('visibility','visible');
 		// $('#topBar').animate({height:'140px'}, 500);
 		var thisID = (this.id);
 		// console.log(thisID);

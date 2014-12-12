@@ -9,20 +9,31 @@ body {
 	font-family: 'Lora', serif;
 }
 
-.hide{
-	position: absolute;
-	left: -2000px;
+.button{
+	font-family: 'Slabo 27px', serif;
+	font-size: 23px;
+	letter-spacing: 2px;
+	padding: 20px;
+	border: 14px;
+	background-color: rgba(67, 125, 225, 0.45);
+	border-color: black;
+	cursor: pointer;
 }
 
-.hide1{
+#skipIntro{
+	width: 132px;
+	top: 30px;
+	right: 30px;
 	position: absolute;
-	left: -2000px;
+	font-size: 18px;
+	visibility: hidden;
 }
 
 /*Map Elements*/
 
 .hLights {
 	cursor: pointer;
+	visibility: hidden;
 }
 
 /*Intro Slide*/
@@ -39,10 +50,10 @@ body {
 
 		#introTitle{
 			color: #555;
-			top: 300px;
+			top: 200px;
 			font-size: 21px;
 			margin-top: 212px;
-			margin-bottom: 21px;
+			margin-bottom: 50px;
 			letter-spacing: 1px;
 			text-align: center;
 		}
@@ -67,18 +78,34 @@ body {
 		}
 
 		#learnMore{
-			font-family: 'Slabo 27px', serif;
-			font-size: 23px;
-			letter-spacing: 2px;
-			position: absolute;
-			right: 306px;
+			width: 148px;
+			margin-left: auto;
+			margin-right: auto;
 			margin-top: 60px;
-			padding: 20px;
-			border: 2px;
-			background-color: rgba(67, 125, 225, 0.45);
-			border-color: #555;
-			cursor: pointer;
+			margin-bottom: 261px;
 		}
+
+#clickStreet{
+	position: absolute;
+	top: 0;
+	height: 140px;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.9);
+	color: #555;
+	padding: 7px;
+	box-sizing: border-box;
+	visibility: hidden;
+}
+
+#clickSteetText{
+	font-size: 31px;
+	text-transform: uppercase;
+	font-style: italic;
+	margin-top: 37px;
+	margin-bottom: 2px;
+	letter-spacing: 13px;
+	text-align: center;
+}
 
 /*Top Bar, In General*/
 
@@ -91,6 +118,7 @@ body {
 	color: #555;
 	padding: 7px;
 	box-sizing: border-box;
+	visibility: hidden;
 }
 
 /* Left side of the Top Bar*/
