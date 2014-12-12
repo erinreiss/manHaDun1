@@ -1,14 +1,22 @@
 html {
-	/*	height: 100%;*/	
 	padding: 0;
 	margin: 0;
 }
 
 body {
-	/*	height: 100%;*/
 	padding: 0;
 	margin: 0;
 	font-family: 'Lora', serif;
+}
+
+.hide{
+	position: absolute;
+	left: -2000px;
+}
+
+.hide1{
+	position: absolute;
+	left: -2000px;
 }
 
 /*Map Elements*/
@@ -17,12 +25,67 @@ body {
 	cursor: pointer;
 }
 
+/*Intro Slide*/
+
+#introSlide{
+	/*	How do I make the hieght the same as the window?*/	
+}
+
+	#introSlideContent{
+		position: absolute;
+		top: 0%;
+		background: rgba(255, 255, 255, 0.9);
+	}
+
+		#introTitle{
+			color: #555;
+			top: 300px;
+			font-size: 21px;
+			margin-top: 212px;
+			margin-bottom: 21px;
+			letter-spacing: 1px;
+			text-align: center;
+		}
+
+		#introSubTitle{
+			color: black;
+			font-size: 32px;
+			letter-spacing: 2px;
+			margin-bottom: 2px;
+			text-align: center;
+		}
+
+		#introBody{
+			color: black;
+			font-size: 17px;
+			width: 75%;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 7px;
+			line-height: 23px;
+			text-align: center;
+		}
+
+		#learnMore{
+			font-family: 'Slabo 27px', serif;
+			font-size: 23px;
+			letter-spacing: 2px;
+			position: absolute;
+			right: 306px;
+			margin-top: 60px;
+			padding: 20px;
+			border: 2px;
+			background-color: rgba(67, 125, 225, 0.45);
+			border-color: #555;
+			cursor: pointer;
+		}
+
 /*Top Bar, In General*/
 
 #topBar {
 	position: absolute;
 	top: 0;
-	height:300px;
+	height: 140px;
 	width: 100%;
 	background: rgba(255, 255, 255, 0.9);
 	color: #555;
@@ -30,45 +93,12 @@ body {
 	box-sizing: border-box;
 }
 
-.hide{
-	position: absolute;
-	left: -1000px;
-}
-
-#introTitle{
-	font-size: 21px;
-	margin-top: 7px;
-	margin-bottom: 21px;
-	letter-spacing: 1px;
-	text-align: center;
-}
-
-#introSubTitle{
-	color: black;
-	font-size: 32px;
-	letter-spacing: 2px;
-	margin-bottom: 2px;
-	text-align: center;
-}
-
-#introBody{
-	color: black;
-	font-size: 17px;
-	width: 75%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 7px;
-	margin-bottom: 2px;
-	line-height: 23px;
-	text-align: center;
-}
-
 /* Left side of the Top Bar*/
 	
 	#streetInfo
 	{
 	float: left;
-	width: 50%;
+	width: 60%;
 	}
 
 	#streetTitleCh {
@@ -96,17 +126,18 @@ body {
 
 	#speakerInfo {
 		float: right;
-		width: 50%;
+		width: 40%;
 	}
 
 	#speakerPhoto {
 		float: left;
-		margin-right: 10px;
+		margin-right: 14px;
 	}
 
 	#speakerStats {
 		font-size: 14.5px;
 		max-width: 550px;
+		margin-right: 13px;
 	}
 
 	#titlePlate {

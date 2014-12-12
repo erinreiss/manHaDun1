@@ -6,6 +6,7 @@
 	<!-- script should maybe be moved to the bottom of the page?> 
 	<script src="audiojs/audiojs/audio.min.js"></script> -->
 	<link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
 	 <!-- <link rel="stylesheet" href="audiojs/includes/index.css" media="screen"> -->
 	<link rel="stylesheet" href="css/style.css">
  <!-- This script should maybe be moved to js> 
@@ -58,17 +59,19 @@
 </g>
 </svg>
 
- <!-- The Top Bar -->
-
-<div id="topBar">
-
 <!-- Intro Slide 1 -->
-
-	<div id="introBar" class="intro">
+<div id="introSlideBox">
+	<div id="introSlideContent" class="intro">
 		<div id="introTitle" class="intro">Man慢Ha蛤Dun顿</div>
 		<div id="introSubTitle" class="intro">Mapping How Chinese Immigrants Rename New York</div>
 		<div id="introBody" class="intro">Immigrants make up almost 60% of the population in Manhattan’s Chinatown, and many of them do not speak English. This map explores what New York sounds like to them.  Click the names of different streets, neighborhoods and landmarks to hear how Chinese immigrants in Lower Manhattan have renamed the city's streets, parks, and other landmarks in their respective dialects. The process of renaming, which probably begins out of convenience and expediency, is one way that immigrants can co-opt their sections of the city, making them more legible and familiar to their community. It's a parallel New York City you can spend your whole life in without ever really knowing.</div>
+	<div id="learnMore" class="button">LEARN MORE</div>
 	</div>
+</div>
+
+<!-- The Top Bar -->
+
+<div id="topBar" class="hide1">
 
 <!-- Left Side of TopBar -->
 
@@ -76,15 +79,15 @@
 		<div id="streetTitleCh"></div>
 		<div id="streetTitleEn"></div>
 		<div id="audioDiv"> 
-			<audio id="player" class="hide" controls="controls"><source id="audioFill" src=""/></audio>
+			<audio id="player" controls="controls"><source id="audioFill" src=""/></audio>
 		</div>
 	</div>
 
 <!-- Right Side of TopBar -->
 	
 	<div id="speakerInfo">
-		<div id="photoSpace" class="hide"><img id="speakerPhoto" src="" style="width:100px;height:100px"></div>
-		<div id="speakerStats" class="hide">
+		<div id="photoSpace"><img id="speakerPhoto" src="" style="width:124px;height:124px"></div>
+		<div id="speakerStats">
 			<b>Name:  </b><span class="nameFill"></span> 
 			<br><b>Occupation:  </b> <span class="jobFill"></span>
 			<br><b>Time Spent:  </b><span class="timeFill"></span>

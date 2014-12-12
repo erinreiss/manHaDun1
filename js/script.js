@@ -7,7 +7,24 @@ $("#highlights rect").attr("class", "hLights");
 var hLights = $(".hLights");
 var matchData;
 
-// Fade in & out on hover
+// Learn More Button Highlight
+
+$('#learnMore').mouseenter(
+	function(){
+		// console.log("enter");
+		// console.log(this.id)
+		$(this).fadeTo("opacity", "1");
+	}
+);
+
+$('#learnMore').mouseleave(
+	function(){
+		// console.log("exit");
+		$(this).fadeTo("opacity", ".45");
+	}
+);
+
+// Street Highlights fade in & out on hover
 
 $(hLights).mouseenter(
 	function(){
@@ -33,13 +50,17 @@ $.getJSON("convertcsv.json",
     }
 );
 
-//Populate Top Bar with clicked street's info
+// Learn More Click Listener
+$('#learnMore').click(
+	function(){
+		$('.intro').addClass('hide');
+	}
+);
 
-//Click Listener
+// Streets Click Listener
 $(hLights).click(
 	function(){
-		$('.hide').removeClass('hide');
-		$('.intro').addClass('hide');
+		$('.hide1').removeClass('hide1');
 		// $('#topBar').animate({height:'140px'}, 500);
 		var thisID = (this.id);
 		// console.log(thisID);
