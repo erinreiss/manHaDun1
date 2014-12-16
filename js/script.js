@@ -70,7 +70,7 @@ $('#next4').click(
 	}
 );
 
-// Next 3 Element Click Listeners, why are you so lazy?
+// Next3 Element Click Listeners, why are you so lazy?
 
 $('#english').click(
 	function(){
@@ -137,9 +137,9 @@ $('#skipIntro').click(
 	function(){
 		$('#skipIntro').css('visibility','hidden');
 		$('.introPop').css('visibility','hidden');
+		//$('#introBoxes').css('visibility','hidden');
 		$(hLights).css('visibility','visible');
 		$('#clickStreet').css('visibility','visible');
-		//$('html').css('overflow-x','visible');
 	}
 );
 

@@ -1,7 +1,7 @@
 [
   {
     "id":"eastBroadwayH",
-    "streetTitleCh":"Eas Blaway",
+    "streetTitleCh":"Eaas•Blah•way",
     "streetTitleEn":"East Broadway",
     "audioFill":"audio/0031_EasBahlahway.mp3",
     "speakerPhoto":"images/0031_Crop.jpg",
@@ -13,7 +13,7 @@
   },
   {
     "id":"grandH",
-    "streetTitleCh":"Guh•lahn•geeay",
+    "streetTitleCh":"Guh•lan•geeay",
     "streetTitleEn":"Grand Street",
     "audioFill":"audio/0058_Gelan.mp3",
     "speakerPhoto":"images/0058_Crop.jpg",
@@ -25,7 +25,7 @@
   },
   {
     "id":"canalH",
-    "streetTitleCh":"Kuh•neh•Loo",
+    "streetTitleCh":"Kuh•Neh Loo",
     "streetTitleEn":"Canal Street",
     "audioFill":"audio/0030_Kenelu.mp3",
     "speakerPhoto":"images/0030_Crop.jpg",
@@ -37,7 +37,7 @@
   },
   {
     "id":"monroeH",
-    "streetTitleCh":"Menluo Jie",
+    "streetTitleCh":"Men•lo•Geeay",
     "streetTitleEn":"Monroe Street",
     "audioFill":"audio/0042_Menluo.mp3",
     "speakerPhoto":"images/Anon.jpg",
@@ -49,7 +49,7 @@
   },
   {
     "id":"marketH",
-    "streetTitleCh":"Shichang Jie",
+    "streetTitleCh":"Shuh•chahng•Geeay",
     "streetTitleEn":"Market Street",
     "audioFill":"audio/0045_ShiChang.mp3",
     "speakerPhoto":"images/0045_b_Crop.jpg",
@@ -61,7 +61,7 @@
   },
   {
     "id":"divisionH",
-    "streetTitleCh":"Daywhysun Gai",
+    "streetTitleCh":"Day•why•sun•Gai",
     "streetTitleEn":"Division Street",
     "audioFill":"audio/0051a_Daywhysun.mp3",
     "speakerPhoto":"images/0051_old_Crop.jpg",
@@ -73,7 +73,7 @@
   },
   {
     "id":"forsythH",
-    "streetTitleCh":"Fwosai Gai",
+    "streetTitleCh":"Fwo•sai•Gai",
     "streetTitleEn":"Forsyth Street",
     "audioFill":"audio/0051b_Fwosai.mp3",
     "speakerPhoto":"images/Anon.jpg",
@@ -85,7 +85,7 @@
   },
   {
     "id":"mBridgeH",
-    "streetTitleCh":"Manhadun Da Qiao",
+    "streetTitleCh":"Man•ha•doon•dah•cheow",
     "streetTitleEn":"Manhattan Bridge",
     "audioFill":"audio/0052_ManhadunBridge.mp3",
     "speakerPhoto":"images/0052_Crop.jpg",
@@ -97,7 +97,7 @@
   },
   {
     "id":"sParkH",
-    "streetTitleCh":"Gelan Jie Gong Yuan",
+    "streetTitleCh":"Guh•Lan•Geeay•gong•you•ehn",
     "streetTitleEn":"Sara D. Roosevelt Park",
     "audioFill":"audio/0056a_GelanJiePark.mp3",
     "speakerPhoto":"images/Anon.jpg",
@@ -109,7 +109,7 @@
   },
   {
     "id":"eldridgeH",
-    "streetTitleCh":"Ailuzhi Jie",
+    "streetTitleCh":"Eye•leeay•zuh•geeay",
     "streetTitleEn":"Eldridge Street",
     "audioFill":"audio/0056b_Ailuzhi.mp3",
     "speakerPhoto":"images/Anon.jpg",
@@ -121,7 +121,7 @@
   },
   {
     "id":"ludlowH",
-    "streetTitleCh":"Lutlo Gai",
+    "streetTitleCh":"Lut•low•Gai",
     "streetTitleEn":"Ludlow Street",
     "audioFill":"audio/0060_Lutlo.mp3",
     "speakerPhoto":"images/0060_Crop.jpg",
@@ -133,7 +133,7 @@
   },
   {
     "id":"broomeH",
-    "streetTitleCh":"Bulun Jie",
+    "streetTitleCh":"Boo•Loon•Geeay",
     "streetTitleEn":"Broome Street",
     "audioFill":"audio/0061a_Bulun.mp3",
     "speakerPhoto":"images/Anon.jpg",
@@ -145,7 +145,7 @@
   },
   {
     "id":"delanceyH",
-    "streetTitleCh":"Dilasee",
+    "streetTitleCh":"Dee•Lah•See",
     "streetTitleEn":"Delancey Street",
     "audioFill":"audio/0061b_Deelasee.mp3",
     "speakerPhoto":"images/Anon.jpg",
@@ -157,7 +157,7 @@
   },
   {
     "id":"hesterH",
-    "streetTitleCh":"Heesuh Da Jie",
+    "streetTitleCh":"Hee•suh•Dah•Geeay",
     "streetTitleEn":"Hester Street",
     "audioFill":"audio/0062_Heeshi.mp3",
     "speakerPhoto":"images/0062_Crop.jpg",
@@ -169,7 +169,7 @@
   },
   {
     "id":"pikeH",
-    "streetTitleCh":"Paike Jie",
+    "streetTitleCh":"Pie•kuh•Geeay",
     "streetTitleEn":"Pike Street",
     "audioFill":"audio/0063a_Piake.mp3",
     "speakerPhoto":"images/0063_Crop.jpg",
@@ -181,7 +181,7 @@
   },
   {
     "id":"allenH",
-    "streetTitleCh":"Yalun Jie",
+    "streetTitleCh":"Ya•loon•geeay",
     "streetTitleEn":"Allen Steet",
     "audioFill":"audio/0063b_Yalun.mp3",
     "speakerPhoto":"images/Anon.jpg",
@@ -193,7 +193,7 @@
   },
   {
     "id":"madisonH",
-    "streetTitleCh":"Maduhsin Gai",
+    "streetTitleCh":"Mah•duh•sun•Gai",
     "streetTitleEn":"Madison Street",
     "audioFill":"audio/0034_Maduhsin.mp3",
     "speakerPhoto":"images/0034_Crop.jpg",
