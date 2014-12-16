@@ -55,12 +55,9 @@ body {
 		}
 
 			#introTitle{
-				color: #555;
-				font-size: 21px;
-				margin-top: 140px;
+				margin-top: 97px;
 				margin-bottom: 50px;
-				letter-spacing: 1px;
-				text-align: center;
+				/*text-align: center;*/
 			}
 
 			#introSubTitle{
