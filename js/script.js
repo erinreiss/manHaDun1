@@ -52,28 +52,25 @@ $.getJSON("convertcsv.json",
 // Next Click Listeners
 $('#next1').click(
 	function(){
-		// $('.intro').fadeTo('opacity', '0');
 		$('.intro1').css('visibility','hidden');
 		$('#skipIntro').css('visibility','visible');
-		$('#intro2').css('visibility','visible');
 		$('.intro2').css('visibility','visible');
 	}
 );
 
 $('#next2').click(
 	function(){
-		$('#intro2').css('visibility','hidden');
 		$('.intro2').css('visibility','hidden');
-		$('#intro3').css('visibility','visible');
-		$('#forsythH').fadeTo("opacity", "0");
+		$('#intro3eng').css('visibility','visible');
+		$('.intro3').css('visibility','visible');
 	}
 );
 
 $('#next3').click(
 	function(){
 		console.log(this);
-		$('#intro3').css('visibility','hidden');
-		$('#intro4').css('visibility','visible');
+		$('.intro3').css('visibility','hidden');
+		$('.intro3boxes').css('visibility','hidden');
 		$('.intro4').css('visibility','visible');
 		$('#skipIntro').css('visibility','hidden');
 	}

@@ -93,60 +93,13 @@ body {
 	/*Intro Pops*/
 	
 		.introPop{
-			position: absolute;
-			background-color: rgba(255, 255, 255, 0.9);
 			visibility: hidden;
+			z-index: 2000;
 		}
 
-		.popTitle{
-			font-size: 22px;
-			text-align: center;
-			margin-top: 25px;
-		}
-
-		.popBody{
-			margin-top: 11px;
-			margin-left: 25px;
-			margin-right: 25px;
-			text-align: justify;
-		}
 
 		.popNext{
-			font-family: 'Slabo 27px', serif;
-			font-size: 23px;
-			letter-spacing: 2px;
-			color: rgba(67, 125, 225, 0.45);
 			cursor: pointer;
-			text-align: center;
-			margin-top: 31px;
-		}
-
-		#intro2{
-			height: 615px;
-			width: 410px;
-			top: 20px;
-			left: 191px;
-			color:#555;
-		}
-
-		#intro3{
-			height: 439px;
-			width: 514px;
-			top: 2vh;
-			left: 50vw;
-			color:#555;
-		}
-
-		#intro4{
-			height: 439px;
-			width: 514px;
-			top: 20px;
-			left: 191px;
-			color:#555;
-		}
-
-		#next3{
-			margin-top: 64px;
 		}
 
 /*Names centering and shape is sloppy as hell*/
