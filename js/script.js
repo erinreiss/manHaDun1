@@ -7,22 +7,6 @@ $("#highlights rect").attr("class", "hLights");
 var hLights = $(".hLights");
 var matchData;
 
-// Learn More Button Highlight NOT WORKING
-
-$('#learnMore').mouseenter(
-	function(){
-		$(this).animate({backgroundColor: "rgba(67, 125, 225, 0.95)"
-		},500);
-	}
-);
-
-$('#learnMore').mouseleave(
-	function(){
-		$(this).animate({backgroundColor: "rgba(67, 125, 225, 0.45)"
-		},500);
-	}
-);
-
 // Street Highlights fade in & out on hover
 
 $(hLights).mouseenter(
@@ -81,33 +65,71 @@ $('#next4').click(
 		console.log(this);
 		$('#intro4').css('visibility','hidden');
 		$('.intro4').css('visibility','hidden');
-		//$('.introPop').css('visibility','hidden');
 		$(hLights).css('visibility','visible');
 		$('#clickStreet').css('visibility','visible');
 	}
 );
 
-//Names Element Click Listener
-// $('#english').click(
-// 	function(){
-// 		$(this).css('background-color', 'rgba(67, 125, 225, 0.9)');
-// 	}
-// );
-// $('#mandarin').click(
-// 	function(){
+// Next 3 Element Click Listeners, why are you so lazy?
 
-// 	}
-// );
-// $('#fujianese').click(
-// 	function(){
+$('#english').click(
+	function(){
+		$('#intro3eng').css('visibility','visible');
+		$('#intro3man').css('visibility','hidden');
+		$('#intro3fuj').css('visibility','hidden');
+		$('#intro3can').css('visibility','hidden');
+	}
+);
+$('#mandarin').click(
+	function(){
+		$('#intro3eng').css('visibility','hidden');
+		$('#intro3man').css('visibility','visible');
+		$('#intro3fuj').css('visibility','hidden');
+		$('#intro3can').css('visibility','hidden');
+	}
+);
+$('#fujianese').click(
+	function(){
+		$('#intro3eng').css('visibility','hidden');
+		$('#intro3man').css('visibility','hidden');
+		$('#intro3fuj').css('visibility','visible');
+		$('#intro3can').css('visibility','hidden');
+	}
+);
+$('#cantonese').click(
+	function(){
+		$('#intro3eng').css('visibility','hidden');
+		$('#intro3man').css('visibility','hidden');
+		$('#intro3fuj').css('visibility','hidden');
+		$('#intro3can').css('visibility','visible');
+	}
+);
 
-// 	}
-// );
-// $('#cantonese').click(
-// 	function(){
-
-// 	}
-// );
+	//Next3 Element Sound Click Listeners
+	var audio1 = $("#mbE")[0];
+	$('#english').click(function() {
+	  	audio1.pause();
+    	audio1.load();
+    	audio1.play();
+	});
+	var audio2 = $("#mbF")[0];
+	$('#fujianese').click(function() {
+	  	audio2.pause();
+    	audio2.load();
+    	audio2.play();
+	});
+	var audio3 = $("#mbM")[0];
+	$('#mandarin').click(function() {
+	  	audio3.pause();
+    	audio3.load();
+    	audio3.play();
+	});
+	var audio4 = $("#mbC")[0];
+	$('#cantonese').click(function() {
+	  	audio4.pause();
+    	audio4.load();
+    	audio4.play();
+	});
 
 // Skip Intro Click Listener
 
@@ -126,7 +148,6 @@ $(hLights).click(
 	function(){
 		$('#clickStreet').css('visibility','hidden');
 		$('#streetsBar').css('visibility','visible');
-		// $('#streetsBar').animate({height:'140px'}, 500);
 		var thisID = (this.id);
 		// console.log(thisID);
 		for(var i=0;i<matchData.length;i++) {
@@ -150,10 +171,10 @@ $(hLights).click(
 //function to reload audio player on each click
 
 function changeTrack(sourceUrl) {
-    var audio = $("#player");      
+    var audioDues = $("#player");      
     $("#audioFill").attr("src", sourceUrl);
-    audio[0].pause();
-    audio[0].load();//suspends and restores all audio element
-    audio[0].play();
+    audioDues[0].pause();
+    audioDues[0].load();//suspends and restores all audio element
+    audioDues[0].play();
 }
 
