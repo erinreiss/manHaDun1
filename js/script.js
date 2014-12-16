@@ -136,8 +136,7 @@ $('#cantonese').click(
 $('#skipIntro').click(
 	function(){
 		$('#skipIntro').css('visibility','hidden');
-		$('.introPop').css('visibility','hidden');
-		//$('#introBoxes').css('visibility','hidden');
+		$('.introPop').css('display','none');
 		$(hLights).css('visibility','visible');
 		$('#clickStreet').css('visibility','visible');
 	}
