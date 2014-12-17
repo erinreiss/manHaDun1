@@ -1,18 +1,24 @@
-// On Load, give a class of "hLights" to all rects in "highlights"
+// On Load, give a class of "hLights" to all rects in "highlights" and set up some variables
 
 $("#highlights rect").attr("class", "hLights");
-
-// Hover Listener
-
 var hLights = $(".hLights");
 var matchData;
+
+//Load CSV Content using Json
+
+$.getJSON("convertcsv.json", 
+	function(content){
+    	console.log(content);
+    	matchData = content;
+    }
+);
 
 // Street Highlights fade in & out on hover
 
 $(hLights).mouseenter(
 	function(){
 		// console.log("enter");
-		// console.log(this.id)
+		// console.log(this.id);
 		$(this).fadeTo("opacity", ".39");
 	}
 );
@@ -22,15 +28,6 @@ $(hLights).mouseleave(
 		// console.log("exit");
 		$(this).fadeTo("opacity", "0");
 	}
-);
-
-//Load CSV Content using Json
-
-$.getJSON("convertcsv.json", 
-	function(content){
-    	console.log(content);
-    	matchData = content;
-    }
 );
 
 // Next Click Listeners

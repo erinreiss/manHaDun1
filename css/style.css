@@ -166,13 +166,13 @@ body {
 
 /* Right side of the Streets Top Bar*/
 
-	/*#voiceOf{
+	#voiceOf{
 	    width: 200px;
 	    height: 100px;
 	    -ms-transform: rotate(-90deg);
 	    -webkit-transform: rotate(-90deg);
 	    transform: rotate(-90deg);
-	}*/
+	}
 
 	#speakerInfo {
 		float: right;
