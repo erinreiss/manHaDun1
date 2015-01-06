@@ -50,10 +50,10 @@ $('#next2').click(
 $('#next3').click(
 	function(){
 		console.log(this);
-		$('.intro3').css('visibility','hidden');
-		$('.intro3boxes').css('visibility','hidden');
+		$('.intro3').css('display','none');
+		$('.intro3boxes').css('display','none');
 		$('.intro4').css('visibility','visible');
-		$('#skipIntro').css('visibility','hidden');
+		$('#skipIntro').css('display','none');
 	}
 );
 
