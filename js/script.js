@@ -67,6 +67,14 @@ $('#next4').click(
 	}
 );
 
+//Next2 Element Sound Click Listeners
+	var audiof = $("#fPop")[0];
+	$('#forsythPop').click(function() {
+	  	audiof.pause();
+    	audiof.load();
+    	audiof.play();
+	});
+
 // Next3 Element Click Listeners, why are you so lazy?
 
 $('#english').click(
