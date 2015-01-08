@@ -12,6 +12,10 @@ body {
 	font-family: 'Lora', serif;
 }
 
+.bold{
+	font-weight: bold;
+}
+
 .button{
 	font-family: 'Slabo 27px', serif;
 	font-size: 23px;
